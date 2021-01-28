@@ -30,3 +30,13 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/admin/dashboard','AdminController@index')->name('admin.index');
+
+Route::get('/admin/user','UserController@index')->name('user.index');
+Route::get('/admin/user/create','UserController@create')->name('user.create');
+Route::post('/admin/user/store','UserController@store')->name('user.store');
+Route::get('/admin/user/{user}/edit','UserController@edit')->name('user.edit');
+Route::patch('/admin/user/{user}/update','UserController@update')->name('user.update');
+Route::delete('/admin/user/{user}/destroy','UserController@destroy')->name('user.destroy');
+
+
+
