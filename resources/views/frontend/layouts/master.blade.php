@@ -77,8 +77,19 @@
                     <nav>
                         <ul class="main-menu">
                             <li class="main-menu__item"><a class="main-menu__link" href="{{route('index')}}"><span>Home</span></a></li>
-                            <li class="main-menu__item"><a class="main-menu__link" href="{{route('request')}}"><span>Request</span></a></li>
-                            <li class="main-menu__item"><a class="main-menu__link" href="{{route('aboutus')}}"><span>About Us</span></a></li>
+                            <li class="main-menu__item"><a class="main-menu__link" href="{{route('request.create')}}"><span>Request</span></a></li>
+                            <li class="main-menu__item"><a class="main-menu__link" href=""><span>About Us</span></a></li>
+                            @auth()
+                            <li class="main-menu__item"><a class="main-menu__link" href="{{ route('logout') }}"
+                                                           onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
+                                </a></li>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                            @endauth
 
                         </ul>
                     </nav>
@@ -88,7 +99,7 @@
 
                     <div class="dropdown-trigger d-block d-sm-none">
                         <div class="dropdown-trigger__item"></div>
-                    </div><a class="button button--squared" href="{{route('donate')}}"><span>Donate</span></a>
+                    </div><a class="button button--squared" href=""><span>Donate</span></a>
                 </div>
             </div>
         </div>

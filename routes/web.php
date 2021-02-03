@@ -13,30 +13,39 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
-Route::get('/','AdminController@home')->name('index');
-Route::get('/request','AdminController@request')->name('request');
-Route::get('/donate','AdminController@donate')->name('donate');
-Route::get('/aboutus','AdminController@aboutus')->name('aboutus');
+//Route::get('/', function () {
+//    return view('index');
+//});
+
+//Route::get('/','AdminController@home')->name('index');
+//Route::get('/request','AdminController@request')->name('request');
+//Route::get('/donate','AdminController@donate')->name('donate');
+//Route::get('/aboutus','AdminController@aboutus')->name('aboutus');
 
 Auth::routes();
 
 //Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
+Route::middleware('auth')->group(function (){
+    Route::get('/','BloodRequestController@index')->name('index');
+    Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/home', 'HomeController@index')->name('home');
+    Route::get('/admin/dashboard','AdminController@index')->name('admin.index');
 
-Route::get('/admin/dashboard','AdminController@index')->name('admin.index');
+    Route::get('/admin/user','UserController@index')->name('user.index');
+    Route::get('/admin/user/create','UserController@create')->name('user.create');
+    Route::post('/admin/user/store','UserController@store')->name('user.store');
+    Route::get('/admin/user/{user}/edit','UserController@edit')->name('user.edit');
+    Route::patch('/admin/user/{user}/update','UserController@update')->name('user.update');
+    Route::delete('/admin/user/{user}/destroy','UserController@destroy')->name('user.destroy');
 
-Route::get('/admin/user','UserController@index')->name('user.index');
-Route::get('/admin/user/create','UserController@create')->name('user.create');
-Route::post('/admin/user/store','UserController@store')->name('user.store');
-Route::get('/admin/user/{user}/edit','UserController@edit')->name('user.edit');
-Route::patch('/admin/user/{user}/update','UserController@update')->name('user.update');
-Route::delete('/admin/user/{user}/destroy','UserController@destroy')->name('user.destroy');
+
+    Route::get('/request/create','BloodRequestController@create')->name('request.create');
+    Route::post('/request/store','BloodRequestController@store')->name('request.store');
+
+});
+
 
 
 
