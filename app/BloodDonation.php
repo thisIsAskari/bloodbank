@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class BloodRequest extends Model
+class BloodDonation extends Model
 {
     protected $guarded = [];
 
@@ -13,8 +13,8 @@ class BloodRequest extends Model
         return $this->belongsTo('App\User');
     }
 
-    public function donations()
+    public function bloodRequest()
     {
-        return $this->hasMany('App\BloodDonation', 'blood_request_id', 'id');
+        return $this->belongsTo('App\BloodRequest');
     }
 }

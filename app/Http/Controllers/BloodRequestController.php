@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\BloodDonation;
 use App\BloodRequest;
 use App\User;
 use Illuminate\Http\Request;
@@ -18,7 +19,10 @@ class BloodRequestController extends Controller
      */
     public function index()
     {
-        return view('index');
+        $bloodrequests = BloodRequest::orderBy('id','DESC')->get();
+        $users = User::all();
+        $donations = BloodDonation::all();
+        return view('index',['bloodrequests'=>$bloodrequests,'users'=>$users,'donations'=>$donations]);
     }
 
     /**

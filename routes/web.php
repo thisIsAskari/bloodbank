@@ -44,6 +44,9 @@ Route::middleware('auth')->group(function (){
     Route::get('/request/create','BloodRequestController@create')->name('request.create');
     Route::post('/request/store','BloodRequestController@store')->name('request.store');
 
+    Route::get('/donation/{bloodRequest}/create','BloodDonationController@fetchByRequest')->name('donation.create');
+    Route::post('/donation/store','BloodDonationController@store')->name('donation.store');
+
 });
 
 

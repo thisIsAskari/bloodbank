@@ -110,9 +110,9 @@
                     <div class="col-md-4 text-center">
                         <div class="counter-item counter-item--style-3">
                             <div class="counter-item__top">
-                                <h6 class="counter-item__title">FullFill Requests</h6>
+                                <h6 class="counter-item__title">Requests</h6>
                             </div>
-                            <div class="counter-item__lower"><span class="js-counter">300</span><span>k</span></div>
+                            <div class="counter-item__lower"><span class="js-counter">@if($bloodrequests != null){{count($bloodrequests)}}@endif</span><span> </span></div>
                         </div>
                     </div>
                     <div class="col-md-4 text-center">
@@ -120,7 +120,7 @@
                             <div class="counter-item__top">
                                 <h6 class="counter-item__title">Donations Received</h6>
                             </div>
-                            <div class="counter-item__lower"><span class="js-counter">65</span><span>bil</span></div>
+                            <div class="counter-item__lower"><span class="js-counter">{{count($donations)}}</span><span></span></div>
                         </div>
                     </div>
                     <div class="col-md-4 text-center">
@@ -128,7 +128,7 @@
                             <div class="counter-item__top">
                                 <h6 class="counter-item__title">Users</h6>
                             </div>
-                            <div class="counter-item__lower"><span class="js-counter">100</span><span>k +</span></div>
+                            <div class="counter-item__lower"><span class="js-counter">{{count($users)}}</span><span> </span></div>
                         </div>
                     </div>
                 </div>
@@ -154,27 +154,34 @@
                 <div class="causes-holder__wrapper">
                     <div class="causes-slider causes-slider--dots offset-margin">
 
-                        <div class="causes-slider__item">
-                            <div class="causes-item causes-item--primary">
-                                <div class="causes-item__body">
-                                    <div class="causes-item__top">
-                                        <h6 class="causes-item__title"> <a href="cause-details.html">Username here</a></h6>
-                                        <p>Add Some description here! candiru rocket danio tilefish stingray deepwater stingray Sacramento splittail</p>
-                                    </div>
-                                    <div class="causes-item__lower">
-                                        <div class="progress-bar">
-                                            <div class="progress-bar__inner" style="width: 78%;">
-                                                <div class="progress-bar__value">78%</div>
+                        @foreach($bloodrequests as $bloodrequest)
+                            @if($bloodrequest->user_id == Auth::user()->id)
+                                @continue
+                            @endif
+                            <div class="causes-slider__item">
+                                <div class="causes-item causes-item--primary">
+                                    <div class="causes-item__body">
+                                        <div class="causes-item__top">
+                                            @foreach($users as $user)
+                                                <h6 class="causes-item__title"> <a href="cause-details.html">{{$user->id == $bloodrequest->user_id ? $user->name : ''}}</a></h6>
+                                            @endforeach
+                                            <p>{{Str::limit($bloodrequest->message,120,'...')}}</p>
+                                        </div>
+                                        <div class="causes-item__lower">
+                                            <div class="progress-bar">
+                                                <div class="progress-bar__inner" style="width: 78%;">
+                                                    <div class="progress-bar__value">78%</div>
+                                                </div>
+                                            </div>
+                                            <div class="causes-item__details-holder">
+                                                <div class="causes-item__details-item"><span>Blood Group: </span><span>{{$bloodrequest->blood_type}}</span></div>
+                                                <div class="causes-item__details-item text-right"><span>Number of Bottles: </span><span>{{$bloodrequest->num_of_bottles}}</span></div>
                                             </div>
                                         </div>
-                                        <div class="causes-item__details-holder">
-                                            <div class="causes-item__details-item"><span>Blood Group: </span><span>B+</span></div>
-                                            <div class="causes-item__details-item text-right"><span>Number of Bottles: </span><span>10</span></div>
-                                        </div>
-                                    </div>
-                                </div><a class="button causes-item__button button--primary" href="#">+ Donate</a>
+                                    </div><a class="button causes-item__button button--primary" href="{{route('donation.create',$bloodrequest->id)}}">+ Donate</a>
+                                </div>
                             </div>
-                        </div>
+                        @endforeach
 
                         <div class="causes-slider__item">
                             <div class="causes-item causes-item--primary">
