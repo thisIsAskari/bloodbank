@@ -68,6 +68,8 @@
                             @csrf
                             <div class="row">
                                 <div class="col-lg-6" >
+
+
                                     <input type="hidden" name="user_id" value="{{Auth::check() ? Auth::user()->id : ''}}"/>
                                     <input class="form__field" type="email" name="email" value="{{Auth::check() ? Auth::user()->email : ''}}" placeholder="Email" disabled/>
 

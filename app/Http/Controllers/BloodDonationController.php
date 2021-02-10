@@ -21,6 +21,21 @@ class BloodDonationController extends Controller
     }
 
     /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function adminIndex()
+    {
+        $donations = BloodDonation::orderBy('id','DESC')->get();
+        $requests = BloodRequest::all();
+        $users = User::all();
+        return view('admin.donations.index',['donations'=>$donations,'requests'=>$requests,'users'=>$users]);
+    }
+
+
+
+    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
@@ -32,7 +47,22 @@ class BloodDonationController extends Controller
 
     public function fetchByRequest(BloodRequest $bloodRequest)
     {
-        return view('frontend.donate',['bloodrequest'=>$bloodRequest]);
+
+        $bloodRequests = BloodRequest::where('id', $bloodRequest->id)->get();
+
+        foreach($bloodRequests as $item)
+        {
+            $donations = BloodDonation::where('blood_request_id', $item['id'])->get();
+
+
+            $count = 0;
+            foreach ($donations as $donation){
+                $count += intval($donation["num_of_bottles"]);
+            }
+
+            $diff = $item['num_of_bottles'] - $count;
+        }
+        return view('frontend.donate',['bloodrequest'=>$bloodRequest,'diff'=>$diff]);
     }
     /**
      * Store a newly created resource in storage.
@@ -144,6 +174,9 @@ class BloodDonationController extends Controller
      */
     public function destroy(BloodDonation $bloodDonation)
     {
-        //
+        $bloodDonation->delete();
+        Session::flash('message','Donation Deleted Successfully');
+        Session::flash('alert-type','success');
+        return redirect()->route('admin.donation.index');
     }
 }

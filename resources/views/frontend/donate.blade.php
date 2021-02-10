@@ -92,10 +92,10 @@
                                     <label>Contact Number</label>
                                     <input type="text" name="contact_number" class="form__field" value="{{$bloodrequest->contact_number}}" disabled/>
                                     <label>No of Bottles</label>
-                                    <input type="text" name="num_of_bottles" class="form__field" value="{{$bloodrequest->num_of_bottles}}" disabled/>
+                                    <input type="text" name="num_of_bottles" class="form__field" value="{{$diff}}" disabled/>
                                 </div>
                                 <div class="col-lg-6">
-                                    <textarea class="form__field form__message" disabled>{{$bloodrequest->message}}</textarea>
+                                    <textarea class="form__field form__message" placeholder="Message Not Found!" disabled>{{$bloodrequest->message}}</textarea>
                                 </div>
 
                             </div>

@@ -40,12 +40,24 @@ Route::middleware('auth')->group(function (){
     Route::patch('/admin/user/{user}/update','UserController@update')->name('user.update');
     Route::delete('/admin/user/{user}/destroy','UserController@destroy')->name('user.destroy');
 
+    Route::get('/admin/request','BloodRequestController@adminIndex')->name('admin.request.index');
+    Route::get('/admin/request/create','BloodRequestController@adminRequestCreate')->name('admin.request.create');
+    Route::post('/admin/request/store','BloodRequestController@adminRequestStore')->name('admin.request.store');
+    Route::get('/admin/request/{bloodRequest}/edit','BloodRequestController@adminRequestEdit')->name('admin.request.edit');
+    Route::put('/admin/request/{bloodRequest}/update','BloodRequestController@adminRequestUpdate')->name('admin.request.update');
+    Route::delete('/admin/request/{bloodRequest}/delete','BloodRequestController@destroy')->name('admin.request.destroy');
+
+    Route::get('/admin/donation','BloodDonationController@adminIndex')->name('admin.donation.index');
+    Route::delete('/admin/donation/{bloodDonation}/delete','BloodDonationController@destroy')->name('admin.donation.destroy');
 
     Route::get('/request/create','BloodRequestController@create')->name('request.create');
     Route::post('/request/store','BloodRequestController@store')->name('request.store');
 
+    Route::get('/donation','BloodRequestController@showAll')->name('request.showall');
+
     Route::get('/donation/{bloodRequest}/create','BloodDonationController@fetchByRequest')->name('donation.create');
     Route::post('/donation/store','BloodDonationController@store')->name('donation.store');
+
 
 });
 

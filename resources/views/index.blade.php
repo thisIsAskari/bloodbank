@@ -154,98 +154,32 @@
                 <div class="causes-holder__wrapper">
                     <div class="causes-slider causes-slider--dots offset-margin">
 
-                        @foreach($bloodrequests as $bloodrequest)
-                            @if($bloodrequest->user_id == Auth::user()->id)
-                                @continue
-                            @endif
+                        @foreach($filteredRequests as $filteredRequest)
+
                             <div class="causes-slider__item">
                                 <div class="causes-item causes-item--primary">
                                     <div class="causes-item__body">
                                         <div class="causes-item__top">
                                             @foreach($users as $user)
-                                                <h6 class="causes-item__title"> <a href="cause-details.html">{{$user->id == $bloodrequest->user_id ? $user->name : ''}}</a></h6>
+                                                <h6 class="causes-item__title"> <a href="cause-details.html">{{$user->id == $filteredRequest->user_id ? $user->name : ''}}</a></h6>
                                             @endforeach
-                                            <p>{{Str::limit($bloodrequest->message,120,'...')}}</p>
+                                            <p>{{Str::limit($filteredRequest->message,120,'...')}}</p>
                                         </div>
                                         <div class="causes-item__lower">
                                             <div class="progress-bar">
-                                                <div class="progress-bar__inner" style="width: 78%;">
-                                                    <div class="progress-bar__value">78%</div>
+                                                <div class="progress-bar__inner" style="width: {{$filteredRequest->percentage}}%;">
+                                                    <div class="progress-bar__value">{{$filteredRequest->percentage,2}}%</div>
                                                 </div>
                                             </div>
                                             <div class="causes-item__details-holder">
-                                                <div class="causes-item__details-item"><span>Blood Group: </span><span>{{$bloodrequest->blood_type}}</span></div>
-                                                <div class="causes-item__details-item text-right"><span>Number of Bottles: </span><span>{{$bloodrequest->num_of_bottles}}</span></div>
+                                                <div class="causes-item__details-item"><span>Blood Group: </span><span>{{$filteredRequest->blood_type}}</span></div>
+                                                <div class="causes-item__details-item text-right"><span>Number of Bottles: </span><span>{{$filteredRequest->num_of_bottles}}</span></div>
                                             </div>
                                         </div>
-                                    </div><a class="button causes-item__button button--primary" href="{{route('donation.create',$bloodrequest->id)}}">+ Donate</a>
+                                    </div><a class="button causes-item__button button--primary" href="{{route('donation.create',$filteredRequest->id)}}">+ Donate</a>
                                 </div>
                             </div>
                         @endforeach
-
-                        <div class="causes-slider__item">
-                            <div class="causes-item causes-item--primary">
-                                <div class="causes-item__body">
-                                    <div class="causes-item__top">
-                                        <h6 class="causes-item__title"> <a href="cause-details.html">Username here</a></h6>
-                                        <p>Add Some description here! candiru rocket danio tilefish stingray deepwater stingray Sacramento splittail</p>
-                                    </div>
-                                    <div class="causes-item__lower">
-                                        <div class="progress-bar">
-                                            <div class="progress-bar__inner" style="width: 78%;">
-                                                <div class="progress-bar__value">78%</div>
-                                            </div>
-                                        </div>
-                                        <div class="causes-item__details-holder">
-                                            <div class="causes-item__details-item"><span>Blood Group: </span><span>B+</span></div>
-                                            <div class="causes-item__details-item text-right"><span>Number of Bottles: </span><span>10</span></div>
-                                        </div>
-                                    </div>
-                                </div><a class="button causes-item__button button--primary" href="#">+ Donate</a>
-                            </div>
-                        </div>
-                        <div class="causes-slider__item">
-                            <div class="causes-item causes-item--primary">
-                                <div class="causes-item__body">
-                                    <div class="causes-item__top">
-                                        <h6 class="causes-item__title"> <a href="cause-details.html">Username here</a></h6>
-                                        <p>Add Some description here! candiru rocket danio tilefish stingray deepwater stingray Sacramento splittail</p>
-                                    </div>
-                                    <div class="causes-item__lower">
-                                        <div class="progress-bar">
-                                            <div class="progress-bar__inner" style="width: 78%;">
-                                                <div class="progress-bar__value">78%</div>
-                                            </div>
-                                        </div>
-                                        <div class="causes-item__details-holder">
-                                            <div class="causes-item__details-item"><span>Blood Group: </span><span>B+</span></div>
-                                            <div class="causes-item__details-item text-right"><span>Number of Bottles: </span><span>10</span></div>
-                                        </div>
-                                    </div>
-                                </div><a class="button causes-item__button button--primary" href="#">+ Donate</a>
-                            </div>
-                        </div>
-                        <div class="causes-slider__item">
-                            <div class="causes-item causes-item--primary">
-                                <div class="causes-item__body">
-                                    <div class="causes-item__top">
-                                        <h6 class="causes-item__title"> <a href="cause-details.html">Username here</a></h6>
-                                        <p>Add Some description here! candiru rocket danio tilefish stingray deepwater stingray Sacramento splittail</p>
-                                    </div>
-                                    <div class="causes-item__lower">
-                                        <div class="progress-bar">
-                                            <div class="progress-bar__inner" style="width: 78%;">
-                                                <div class="progress-bar__value">78%</div>
-                                            </div>
-                                        </div>
-                                        <div class="causes-item__details-holder">
-                                            <div class="causes-item__details-item"><span>Blood Group: </span><span>B+</span></div>
-                                            <div class="causes-item__details-item text-right"><span>Number of Bottles: </span><span>10</span></div>
-                                        </div>
-                                    </div>
-                                </div><a class="button causes-item__button button--primary" href="#">+ Donate</a>
-                            </div>
-                        </div>
 
                     </div>
                 </div>

@@ -1,4 +1,4 @@
-@extends('admin.layouts.master',['activePage'=>'userCreate','title'=>'Users - Bloodbank'])
+@extends('admin.layouts.master',['activePage'=>'userIndex','title'=>'Users - Bloodbank'])
 @section('content')
     <div class="content">
         <div class="container-fluid">
