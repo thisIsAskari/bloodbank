@@ -69,7 +69,7 @@
                 <div class="col-auto d-flex align-items-center">
 
                     <div class="header-logo" style="margin-left: 60%;">
-                        <a class="header-logo__link" href="index.html"><img class="header-logo__img" src="{{asset('frontend/img/logo.png')}}" alt="logo"/></a>
+                        <a class="header-logo__link" href="index.html"><img class="header-logo__img" src="{{asset('frontend/img/bloodbank_logo.png')}}" alt="logo"/></a>
                     </div>
                 </div>
                 <div class="col-auto">

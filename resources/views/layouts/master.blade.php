@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iofrm</title>
+    <title>BloodBank </title>
     <link rel="stylesheet" type="text/css" href="{{asset('loginpage/css/bootstrap.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('loginpage/css/fontawesome-all.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('loginpage/css/iofrm-style.css')}}">

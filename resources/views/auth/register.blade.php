@@ -14,9 +14,7 @@
                 <div class="form-items">
                     <div class="website-logo-inside">
                         <a href="#">
-                            <div class="logo">
-                                <img class="logo-size" src="{{asset('loginpage/images/logo-light.svg')}}" alt="">
-                            </div>
+
                         </a>
                     </div>
                     <div class="page-links">

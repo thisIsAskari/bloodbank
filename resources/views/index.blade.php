@@ -27,7 +27,7 @@
                 </div>
                 <div class="promo-slider__item promo-slider__item--style-2">
                     <picture>
-                        <source srcset="{{asset('frontend/img/contact.jpg')}}" media="(min-width: 992px)"/><img class="img--bg" src="{{asset('frontend/img/promo_2.jpg')}}" alt="img"/>
+                        <source srcset="{{asset('frontend/img/contacts.jpg')}}" media="(min-width: 992px)"/><img class="img--bg" src="{{asset('frontend/img/promo_2.jpg')}}" alt="img"/>
                     </picture>
                     <div class="container">
                         <div class="row">
@@ -127,7 +127,7 @@
                         </div>
                     </div>
                     <div class="col-xl-7">
-                        <p class="no-margin-bottom">Sharksucker sea toad candiru rocket danio tilefish stingray deepwater stingray Sacramento splittail, Canthigaster rostrata. Midshipman dartfish Modoc sucker, yellowtail kingfish</p><a class="button button--blue margin-top-30" href="causes.html">More Causes</a>
+                        <p class="no-margin-bottom">Sharksucker sea toad candiru rocket danio tilefish stingray deepwater stingray Sacramento splittail, Canthigaster rostrata. Midshipman dartfish Modoc sucker, yellowtail kingfish</p>
                     </div>
                 </div>
             </div>
