@@ -6,7 +6,7 @@
             <div class="promo-slider">
                 <div class="promo-slider__item promo-slider__item--style-1">
                     <picture>
-                        <source srcset="{{asset('frontend/img/promo_1.jpg')}}" media="(min-width: 992px)"/><img class="img--bg" src="{{asset('frontend/img/promo_1.jpg')}}" alt="img"/>
+                        <source srcset="{{asset('frontend/img/causes.jpg')}}" media="(min-width: 992px)"/><img class="img--bg" src="{{asset('frontend/img/promo_1.jpg')}}" alt="img"/>
                     </picture>
                     <div class="container">
                         <div class="row">
@@ -14,10 +14,10 @@
                                 <div class="align-container">
                                     <div class="align-container__item">
                                         <div class="promo-slider__wrapper-1">
-                                            <h2 class="promo-slider__title"><span>Blood Bank</span></h2>
+                                            <h2 class="promo-slider__title"><span></span></h2>
                                         </div>
                                         <div class="promo-slider__wrapper-2">
-                                            <p class="promo-slider__subtitle">Add some content here</p>
+                                            <p class="promo-slider__subtitle"></p>
                                         </div>
                                     </div>
                                 </div>
@@ -27,7 +27,7 @@
                 </div>
                 <div class="promo-slider__item promo-slider__item--style-2">
                     <picture>
-                        <source srcset="{{asset('frontend/img/promo_2.jpg')}}" media="(min-width: 992px)"/><img class="img--bg" src="{{asset('frontend/img/promo_2.jpg')}}" alt="img"/>
+                        <source srcset="{{asset('frontend/img/contact.jpg')}}" media="(min-width: 992px)"/><img class="img--bg" src="{{asset('frontend/img/promo_2.jpg')}}" alt="img"/>
                     </picture>
                     <div class="container">
                         <div class="row">
@@ -35,10 +35,10 @@
                                 <div class="align-container">
                                     <div class="align-container__item">
                                         <div class="promo-slider__wrapper-1">
-                                            <h2 class="promo-slider__title"><span>Our Helping</span><br/><span>around the world.</span></h2>
+                                            <h2 class="promo-slider__title"><span></span><br/><span></span></h2>
                                         </div>
                                         <div class="promo-slider__wrapper-2">
-                                            <p class="promo-slider__subtitle">Gray eel-catfish longnose whiptail catfish smalleye squaretail queen danio unicorn fish shortnose greeneye fusilier fish silver carp nibbler sharksucker tench lookdown catfish</p>
+                                            <p class="promo-slider__subtitle"></p>
                                         </div>
                                     </div>
                                 </div>
@@ -48,7 +48,7 @@
                 </div>
                 <div class="promo-slider__item promo-slider__item--style-3">
                     <picture>
-                        <source srcset="{{asset('frontend/img/promo_3.jpg')}}" media="(min-width: 992px)"/><img class="img--bg" src="{{asset('frontend/img/promo_3.jpg')}}" alt="img"/>
+                        <source srcset="{{asset('frontend/img/donors.jpg')}}" media="(min-width: 992px)"/><img class="img--bg" src="{{asset('frontend/img/promo_3.jpg')}}" alt="img"/>
                     </picture>
                     <div class="container">
                         <div class="row">
@@ -56,10 +56,10 @@
                                 <div class="align-container">
                                     <div class="align-container__item">
                                         <div class="promo-slider__wrapper-1">
-                                            <h2 class="promo-slider__title"><span>Helpo Volounteers</span><br/><span>Around the world.</span></h2>
+                                            <h2 class="promo-slider__title"><span></span><br/><span></span></h2>
                                         </div>
                                         <div class="promo-slider__wrapper-2">
-                                            <p class="promo-slider__subtitle">Gray eel-catfish longnose whiptail catfish smalleye squaretail queen danio unicorn fish shortnose greeneye fusilier fish silver carp nibbler sharksucker tench lookdown catfish</p>
+                                            <p class="promo-slider__subtitle"></p>
                                         </div>
                                     </div>
                                 </div>
@@ -69,25 +69,6 @@
                 </div>
             </div>
 
-            <!-- promo pannel start-->
-            <div class="promo-pannel">
-                <div class="promo-pannel__phones">
-                    <p class="promo-pannel__title">Phone numbers</p><a class="promo-pannel__link" href="tel:+180012345678">+ 1800 - 123 456 78</a><a class="promo-pannel__link" href="tel:+18009756511">+ 1800 - 975 65 11</a>
-                </div>
-                <div class="promo-pannel__email">
-                    <p class="promo-pannel__title">Email</p><a class="promo-pannel__link" href="mailto:support@helpo.org">support@helpo.org</a>
-                </div>
-                <div class="promo-pannel__socials">
-                    <p class="promo-pannel__title">Socials</p>
-                    <ul class="promo-socials">
-                        <li class="promo-socials__item"><a class="promo-socials__link" href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                        <li class="promo-socials__item"><a class="promo-socials__link" href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                        <li class="promo-socials__item"><a class="promo-socials__link" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                        <li class="promo-socials__item"><a class="promo-socials__link" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <!-- promo pannel end-->
             <!-- slider nav start-->
             <div class="slider__nav slider__nav--promo">
                 <div class="promo-slider__count"></div>
@@ -137,12 +118,12 @@
         </section>
         <!-- section end-->
         <!-- causes start-->
-        <section class="section causes">
+        <section class="section causes" style="color: white">
             <div class="container">
                 <div class="row margin-bottom">
                     <div class="col-xl-5">
-                        <div class="heading heading--primary"><span class="heading__pre-title color--green">What we Do</span>
-                            <h2 class="heading__title"><span>Helpo</span> <span>Causes</span></h2>
+                        <div class="heading heading--primary"><span class="heading__pre-title" style="color: white">What we Do</span>
+                            <h2 class="heading__title" style="color: white"><span>Helpo</span> <span>Causes</span></h2>
                         </div>
                     </div>
                     <div class="col-xl-7">

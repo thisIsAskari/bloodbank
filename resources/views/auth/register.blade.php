@@ -6,7 +6,7 @@
             <div class="info-holder">
                 <h3>Get more things done with Loggin platform.</h3>
                 <p>Access to the most powerfull tool in the entire design and web industry.</p>
-                <img src="{{asset('loginpage/images/graphic4.svg')}}" alt="">
+                <img src="{{asset('frontend/img/logo.png')}}" alt="">
             </div>
         </div>
         <div class="form-holder">
@@ -24,6 +24,8 @@
                     </div>
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
+                        <input type="hidden" name="role" value="customer">
+
                         <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" value="{{ old('name') }}" placeholder="Username" autocomplete="name" autofocus>
                         @error('name')
                         <span class="invalid-feedback" role="alert">

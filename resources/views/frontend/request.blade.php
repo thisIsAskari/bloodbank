@@ -3,7 +3,7 @@
     <main class="main">
         <section class="promo-primary">
             <picture>
-                <source srcset="{{asset('frontend/img/volunteer.jpg')}}" media="(min-width: 992px)"/><img class="img--bg" src="{{asset('frontend/img/volunteer.jpg')}}" alt="img"/>
+                <source srcset="{{asset('frontend/img/request.png')}}" media="(min-width: 992px)"/><img class="img--bg" src="{{asset('frontend/img/volunteer.jpg')}}" alt="img"/>
             </picture>
             <div class="promo-primary__description"> <span>Request</span></div>
             <div class="container">

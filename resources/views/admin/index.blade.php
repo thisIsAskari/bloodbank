@@ -16,7 +16,8 @@
                         <div class="card-footer">
                             <div class="stats">
                                 <i class="material-icons">date_range</i>Last
-                                {{$last_request->created_at->diffForHumans()}}
+{{--                                {{$last_request->created_at->diffForHumans()}}--}}
+                                {{$last_request}}
                             </div>
                         </div>
                     </div>
@@ -34,7 +35,8 @@
                         <div class="card-footer">
                             <div class="stats">
                                 <i class="material-icons">date_range</i> Last
-                                {{$last_donation->created_at->diffForHumans()}}
+{{--                                {{$last_donation->created_at->diffForHumans()}}--}}
+                                {{$last_donation}}
                             </div>
                         </div>
                     </div>
@@ -53,6 +55,7 @@
                             <div class="stats">
                                 <i class="material-icons">date_range</i>Last
                                 {{$last_user->created_at->diffForHumans()}}
+
                             </div>
                         </div>
                     </div>

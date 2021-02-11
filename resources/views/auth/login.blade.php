@@ -6,7 +6,7 @@
             <div class="info-holder">
                 <h3>Get more things done with Loggin platform.</h3>
                 <p>Access to the most powerfull tool in the entire design and web industry.</p>
-                <img src="{{asset('loginpage/images/graphic4.svg')}}" alt="">
+                <img src="{{asset('frontend/img/logo.png')}}" alt="">
             </div>
         </div>
         <div class="form-holder">
@@ -15,7 +15,7 @@
                     <div class="website-logo-inside">
                         <a href="#">
                             <div class="logo">
-                                <img class="logo-size" src="{{asset('loginpage/images/logo-light.svg')}}" alt="">
+                                <img class="logo-size" src="{{asset('frontend/img/logo.png')}}" alt="">
                             </div>
                         </a>
                     </div>
