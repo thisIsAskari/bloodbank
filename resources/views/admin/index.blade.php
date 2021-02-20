@@ -17,7 +17,7 @@
                             <div class="stats">
                                 <i class="material-icons">date_range</i>Last
 {{--                                {{$last_request->created_at->diffForHumans()}}--}}
-                                {{$last_request}}
+                                {{!empty($last_request) ? $last_request->created_at->diffForHumans() : ''}}
                             </div>
                         </div>
                     </div>
@@ -36,7 +36,7 @@
                             <div class="stats">
                                 <i class="material-icons">date_range</i> Last
 {{--                                {{$last_donation->created_at->diffForHumans()}}--}}
-                                {{$last_donation}}
+                                {{!empty($last_donation) ? $last_donation->created_at->diffForHumans() : ''}}
                             </div>
                         </div>
                     </div>

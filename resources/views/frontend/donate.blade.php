@@ -3,15 +3,14 @@
     <main class="main">
         <section class="promo-primary">
             <picture>
-                <source srcset="{{asset('frontend/img/volunteer.jpg')}}" media="(min-width: 992px)"/><img class="img--bg" src="{{asset('frontend/img/volunteer.jpg')}}" alt="img"/>
+                <source srcset="{{asset('frontend/img/give-blood.png')}}" media="(min-width: 992px)"/><img class="img--bg" src="{{asset('frontend/img/give-blood.png')}}" alt="img"/>
             </picture>
             <div class="promo-primary__description"> <span>Donation</span></div>
             <div class="container">
                 <div class="row">
                     <div class="col-auto">
                         <div class="align-container">
-                            <div class="align-container__item"><span class="promo-primary__pre-title">Blood Bank</span>
-                                <h1 class="promo-primary__title"><span>Enter </span> <span>your details</span></h1>
+                            <div class="align-container__item"><span class="promo-primary__pre-title"></span>
                             </div>
                         </div>
                     </div>

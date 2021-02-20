@@ -6,7 +6,7 @@
             <div class="promo-slider">
                 <div class="promo-slider__item promo-slider__item--style-1">
                     <picture>
-                        <source srcset="{{asset('frontend/img/causes.jpg')}}" media="(min-width: 992px)"/><img class="img--bg" src="{{asset('frontend/img/promo_1.jpg')}}" alt="img"/>
+                        <source srcset="{{asset('frontend/img/save-life.png')}}" media="(min-width: 992px)"/><img class="img--bg" src="{{asset('frontend/img/promo_1.jpg')}}" alt="img"/>
                     </picture>
                     <div class="container">
                         <div class="row">
@@ -27,7 +27,7 @@
                 </div>
                 <div class="promo-slider__item promo-slider__item--style-2">
                     <picture>
-                        <source srcset="{{asset('frontend/img/contacts.jpg')}}" media="(min-width: 992px)"/><img class="img--bg" src="{{asset('frontend/img/promo_2.jpg')}}" alt="img"/>
+                        <source srcset="{{asset('frontend/img/Blood-donation.png')}}" media="(min-width: 992px)"/><img class="img--bg" src="{{asset('frontend/img/promo_2.jpg')}}" alt="img"/>
                     </picture>
                     <div class="container">
                         <div class="row">
@@ -48,7 +48,7 @@
                 </div>
                 <div class="promo-slider__item promo-slider__item--style-3">
                     <picture>
-                        <source srcset="{{asset('frontend/img/donors.jpg')}}" media="(min-width: 992px)"/><img class="img--bg" src="{{asset('frontend/img/promo_3.jpg')}}" alt="img"/>
+                        <source srcset="{{asset('frontend/img/red-cross-blood.png')}}" media="(min-width: 992px)"/><img class="img--bg" src="{{asset('frontend/img/promo_3.jpg')}}" alt="img"/>
                     </picture>
                     <div class="container">
                         <div class="row">
